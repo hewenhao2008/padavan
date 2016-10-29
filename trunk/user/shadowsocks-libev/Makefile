@@ -1,7 +1,7 @@
 SRC_NAME=shadowsocks-libev
 
-CFLAGS += -O3 -pipe -ffast-math -ftree-vectorize -flto -ffunction-sections -fdata-sections
-LDFLAGS += -Wl,-flto --gc-sections
+CFLAGS += -O3 -pipe -ffast-math -ftree-vectorize -ffunction-sections -fdata-sections
+LDFLAGS += -Wl,--gc-sections
 
 all: config_test build
 
@@ -17,6 +17,9 @@ configure:
 	./configure \
 		--disable-documentation \
 		--disable-assert \
+		--disable-ssp \
+		--with-pcre=$(ROOTDIR)/user/shadowsocks-libev/prebuilts/pcre-8.39 \
+		--with-openssl=$(ROOTDIR)/user/shadowsocks-libev/prebuilts/openssl-1.0.1 \
 		--host=$(HOST_TARGET) \
 		--build=$(HOST_BUILD) ; \
 	)
