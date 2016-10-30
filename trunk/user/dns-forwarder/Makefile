@@ -14,10 +14,10 @@ clean:
 		$(MAKE) -C $(SRC_NAME) clean; \
 	fi )
 	rm -f build_done
-	rm -f 
+	rm -f dns-forwarder
 
 romfs:
-	cp $(SRC_NAME)/src/hev-dns-forwarder ./dns-forwarder
+	cp $(SRC_NAME)/src/dns-forwarder .
 	$(STRIP) dns-forwarder
 	$(ROMFSINST) /usr/bin/dns-forwarder
 

@@ -1,7 +1,7 @@
-# Makefile for hev-dns-forwarder
+# Makefile for dns-forwarder
  
-PP=cpp
-CC=cc
+PP=$(CONFIG_CROSS_COMPILER_PATH)/mipsel-linux-uclibc-cpp -mips32r2 -march=mips32r2
+CC=$(CONFIG_CROSS_COMPILER_PATH)/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2
 CCFLAGS=-O3 -pipe -ffast-math -ftree-vectorize -Werror -Wall
 LDFLAGS=
  
@@ -9,7 +9,7 @@ SRCDIR=src
 BINDIR=src
 BUILDDIR=src
  
-TARGET=$(BINDIR)/hev-dns-forwarder
+TARGET=$(BINDIR)/dns-forwarder
 CCOBJSFILE=$(BUILDDIR)/ccobjs
 -include $(CCOBJSFILE)
 LDOBJS=$(patsubst $(SRCDIR)%.c,$(BUILDDIR)%.o,$(CCOBJS))
