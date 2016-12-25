@@ -1,4 +1,4 @@
-SRC_NAME=shadowsocks-libev-2.5.5
+SRC_NAME=shadowsocks-libev-2.5.6
 
 CFLAGS += -O3 -pipe -ffast-math -ftree-vectorize -ffunction-sections -fdata-sections
 LDFLAGS += -Wl,--gc-sections
