@@ -24,3 +24,6 @@ stamp-h1
 /images/*
 /stage
 /stage/*
+!/user/shadowsocks-libev/prebuilts/openssl-1.0.1/lib/*.a
+!/user/shadowsocks-libev/prebuilts/pcre-8.39/lib/*.a
+
