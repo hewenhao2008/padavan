@@ -1,6 +1,7 @@
-SRC_NAME=shadowsocks-libev-2.5.6
+SRC_NAME=shadowsocks-libev-2.6.1
 
 CFLAGS += -O3 -pipe -ffast-math -ftree-vectorize -ffunction-sections -fdata-sections
+CPPFLAGS += -O3 -pipe -ffast-math -ftree-vectorize -ffunction-sections -fdata-sections
 LDFLAGS += -Wl,--gc-sections
 
 all: config_test build
