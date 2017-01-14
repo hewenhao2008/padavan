@@ -359,7 +359,8 @@ man pages of the applications, respectively.
        [--executable <path>]      path to the executable of ss-server
                                   only available in manager mode
 
-       [--plugin <plugin_args>]   Enable SIP003 plugin. (Experimental)
+       [--plugin <name>]          Enable SIP003 plugin. (Experimental)
+       [--plugin-opts <options>]  Set SIP003 plugin options. (Experimental)
 
        [-v]                       verbose mode
 
@@ -377,6 +378,7 @@ The latest shadowsocks-libev has provided a *redir* mode. You can configure your
     # Create new chain
     root@Wrt:~# iptables -t nat -N SHADOWSOCKS
     root@Wrt:~# iptables -t mangle -N SHADOWSOCKS
+    root@Wrt:~# iptables -t mangle -N SHADOWSOCKS_MARK
 
     # Ignore your shadowsocks server's addresses
     # It's very IMPORTANT, just be careful.
